@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragmag 2k21</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/sakura.css" />
+    <script src="dist/sakura.js"></script>
+</head>
+<body>
+    <div class="landing">
+        
+        <section class="landing-background">
+            <img src="assets/landing.svg" alt="Finding Ikigai">
+            <p class="landing-subhead landing-text">Students Council of Fr. CRCE<br>presents</p>
+            <p class="landing-head landing-text">Fragmag 2k21</p>
+            <p class="landing-theme landing-text">Finding Ikigai</p>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js" integrity="sha512-rBvJrSgappbpVQiWJabYgWL32JOqZbhh4cxtj3iWEKx7yVS/h6c2r4q4pwp5AIcF5yvCQzbo+GPwelUjfxaG7Q==" crossorigin="anonymous"></script>
+    <script>
+
+        var sakura = new Sakura('body', {
+            colors: [
+            {
+                gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+                gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+                gradientColorDegree: 120,
+            },
+            {
+                gradientColorStart: 'rgba(255,189,189)',
+                gradientColorEnd: 'rgba(227,170,181)',
+                gradientColorDegree: 120,
+            },
+            {
+                gradientColorStart: 'rgba(212,152,163)',
+                gradientColorEnd: 'rgba(242,185,196)',
+                gradientColorDegree: 120,
+            },
+            ],
+            delay: 100,
+            fallSpeed: 2,
+            maxSize: 14,
+            minSize: 10,
+
+        });
+
+        let tl = anime.timeline({
+            easing: 'linear',
+            duration: '1500ms'
+        })
+
+        tl.add({
+            targets: '.landing-background div',
+            backgroundColor: '#f172a1',
+            delay: anime.stagger(50)
+        })
+        tl.add({
+            targets: '.landing-subhead',
+            opacity: 1
+        })
+        tl.add({
+            targets: '.landing-head',
+            opacity: 1
+        })
+        tl.add({
+            targets: '.landing-background>img',
+            opacity: 1,
+            width: '60vw'
+        }, "-=1000")
+        tl.add({
+            targets: '.landing-theme',
+            opacity: 1
+        }, '-=1000')
+
+        sakura.start();
+        
+
+    </script>
+</body>
+</html>

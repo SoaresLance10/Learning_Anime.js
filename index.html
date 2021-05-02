@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragmag</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="dist/sakura.css" />
+    <script src="dist/sakura.js"></script>
+</head>
+<body>
+    <section>
+        <div class="love"></div>
+        <div class="need"></div>
+        <div class="paid"></div>
+        <div class="good"></div>
+        <div class="text text-l">What you<br>LOVE</div>
+        <div class="text text-n">What the world<br>NEEDS</div>
+        <div class="text text-p">What I can be<br>PAID FOR</div>
+        <div class="text text-g">What I'm<br>Good At</div>
+        <div class="text text-ln">MISSION</div>
+        <div class="text text-lg">PASSION</div>
+        <div class="text text-np">VOCATION</div>
+        <div class="text text-gp">PROFESSION</div>
+        <div class="text text-i">IKIGAI</div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js" integrity="sha512-rBvJrSgappbpVQiWJabYgWL32JOqZbhh4cxtj3iWEKx7yVS/h6c2r4q4pwp5AIcF5yvCQzbo+GPwelUjfxaG7Q==" crossorigin="anonymous"></script>
+    
+    <script>
+        
+        var sakura = new Sakura('body', {
+            colors: [
+            {
+                gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+                gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+                gradientColorDegree: 120,
+            },
+            {
+                gradientColorStart: 'rgba(255,189,189)',
+                gradientColorEnd: 'rgba(227,170,181)',
+                gradientColorDegree: 120,
+            },
+            {
+                gradientColorStart: 'rgba(212,152,163)',
+                gradientColorEnd: 'rgba(242,185,196)',
+                gradientColorDegree: 120,
+            },
+            ],
+            delay: 100,
+            fallSpeed: 2,
+            maxSize: 14,
+            minSize: 10,
+
+        });
+
+        let tl = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: '500ms'
+        })
+
+        tl.add({
+            targets: '.love',
+            top: 30,
+            left: 670,
+            opacity: 1
+        })
+        tl.add({
+            targets: '.paid',
+            top: 300,
+            left: 670,
+            opacity: 1
+        })
+        tl.add({
+            targets: '.need',
+            top: 180,
+            left: 790,
+            opacity: 1
+        })
+        tl.add({
+            targets: '.good',
+            top: 180,
+            left: 550,
+            opacity: 1
+        })
+        tl.add({
+            targets: '.text-l',
+            opacity: 1,
+            delay: 2000
+        })
+        tl.add({
+            targets: ".text-n",
+            opacity: 1,
+            delay: 500
+        })
+        tl.add({
+            targets: ".text-p",
+            opacity: 1,
+            delay: 500
+        })
+        tl.add({
+            targets: ".text-g",
+            opacity: 1,
+            delay: 500
+        })
+        tl.add({
+            targets: ".text-ln",
+            opacity: 1,
+            delay: 500
+        })
+        tl.add({
+            targets: ".text-np",
+            opacity: 1,
+            delay: 500
+        })
+        tl.add({
+            targets: ".text-gp",
+            opacity: 1,
+            delay: 500
+        })
+        tl.add({
+            targets: ".text-lg",
+            opacity: 1,
+            delay: 500
+        })
+        tl.add({
+            targets: ".text-i",
+            opacity: 1,
+            scale: 1.1,
+            delay: 500
+        })
+
+        sakura.start();
+    </script>
+</body>
+</html>
